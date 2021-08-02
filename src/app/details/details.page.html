@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar style="height: 100%;">
+    <div style="display: inline-flex;width: 100%;">
+      <ion-buttons slot="start">
+        <ion-back-button mode="md"></ion-back-button>
+      </ion-buttons>
+      <div style="width: -webkit-calc(100% - 50px);  justify-content: center;align-items: center; display: flex;">
+        <ion-label>
+          Details
+        </ion-label>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="welcome-card">
+    <ion-card-header style="display: inline-flex;">
+      <ion-img [src]="getIcon(global.selectedData.id)" style="height: 25px; width: 25px;margin-right: 10px;"></ion-img>
+      <ion-card-title style="margin-top: 0;">{{global.selectedData.name}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div id="highcharts" style="width:100%; height:400px;"></div>
+    </ion-card-content>
+  </ion-card>
+
+
+  <ion-card class="welcome-card">
+    <ion-card-content>
+      <div id="barcharts" style="width:100%; height:400px;"></div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
